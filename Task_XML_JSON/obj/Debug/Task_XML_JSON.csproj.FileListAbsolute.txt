@@ -1,0 +1,7 @@
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\bin\Debug\Task_XML_JSON.exe.config
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\bin\Debug\Task_XML_JSON.exe
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\bin\Debug\Task_XML_JSON.pdb
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.csprojAssemblyReference.cache
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.csproj.CoreCompileInputs.cache
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.exe
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.pdb
