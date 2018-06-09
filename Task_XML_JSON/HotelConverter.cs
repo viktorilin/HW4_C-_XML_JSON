@@ -93,7 +93,6 @@ namespace Task_XML_JSON
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, hotels);
-                Console.WriteLine("File is converted to XML. Verify at " + path);
             }
         }
     }
