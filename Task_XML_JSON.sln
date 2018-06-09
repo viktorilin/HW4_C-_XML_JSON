@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_XML_JSON", "Task_XML_JSON\Task_XML_JSON.csproj", "{4BF5694A-E7B5-4E84-AF6F-A98A56A4A46C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelTest", "HotelTest\HotelTest.csproj", "{DC5643C9-E42D-42D3-B8B0-D2A0E5D0264D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4BF5694A-E7B5-4E84-AF6F-A98A56A4A46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BF5694A-E7B5-4E84-AF6F-A98A56A4A46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BF5694A-E7B5-4E84-AF6F-A98A56A4A46C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5643C9-E42D-42D3-B8B0-D2A0E5D0264D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5643C9-E42D-42D3-B8B0-D2A0E5D0264D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5643C9-E42D-42D3-B8B0-D2A0E5D0264D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5643C9-E42D-42D3-B8B0-D2A0E5D0264D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

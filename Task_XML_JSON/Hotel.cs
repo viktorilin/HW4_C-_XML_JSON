@@ -67,5 +67,17 @@ namespace Task_XML_JSON
             get => _rating;
             set => _rating = value;
         }
+
+        public override bool Equals(object obj)
+        {
+            var item = obj as Hotel;
+            bool f = item.Name.Equals(Name)
+                     && item.HotelId.Equals(HotelId)
+                     && item.FoundedDate.Equals(FoundedDate)
+                     && item.Rating.Equals(Rating)
+                     && item.TouristCapacity.Equals(TouristCapacity);
+            return f;
+        }
     }
+    
 }

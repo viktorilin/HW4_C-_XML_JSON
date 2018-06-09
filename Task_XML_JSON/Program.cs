@@ -17,10 +17,11 @@ namespace Task_XML_JSON
             string outputPathJson = ConfigurationManager.AppSettings["OutputPathJSON"];
             string inputPath = ConfigurationManager.AppSettings["InputPath"];
 
-            string csvString = @"Edelweiss; 11; 5/25/1988; 180;4.3; 
+            string csvString = @"Name; Hotel Id; Founded date; Tourist capacity; Rating;
+Edelweiss; 11; 5/25/1988; 180;4.3;
 Bristol; 12; 4/3/1965; 140;4.1;
-Hilton; 1; 10/02/1863; 321;2,0; 
-Balaton; 50; 5/1/2000; 110;; 
+Hilton; 1; 10/02/1863; 321;2,0;
+Balaton; 50; 5/1/2000; 110;;
 Empire; 13; 7/25/2011; 240;5,0;";
 
             File.WriteAllText(inputPath, csvString);
@@ -29,10 +30,11 @@ Empire; 13; 7/25/2011; 240;5,0;";
 
 
             List<Hotel> hotels = File.ReadAllLines(inputPath)
+                .Skip(1)
                 .Select(v => hotelConverter.HotelFromCsv(v))
                 .ToList();
 
-
+            
             hotels.Sort(((hotel, hotel1) => hotel1.Rating.CompareTo(hotel.Rating)));
 
             string format = "";
