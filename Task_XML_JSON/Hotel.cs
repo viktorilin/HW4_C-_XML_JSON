@@ -67,23 +67,5 @@ namespace Task_XML_JSON
             get => _rating;
             set => _rating = value;
         }
-
-        public static Hotel FromCsv(string csvLine)
-        {
-            string[] values = csvLine.Split(';');
-
-            Hotel hotel = new Hotel();
-
-            hotel.Name = Convert.ToString(values[0].TrimStart());
-            hotel.HotelId = Convert.ToInt32(values[1].TrimStart());
-            hotel._foundedDate = DateTime.ParseExact(values[2].TrimStart(), "M/d/yyyy", CultureInfo.InvariantCulture);
-            hotel.TouristCapacity = Convert.ToInt32(values[3].TrimStart());
-            if (values[4].Equals(""))
-                hotel.Rating = 0;
-            else
-                hotel.Rating = Convert.ToDouble(values[4].Replace(".", ","));
-
-            return hotel;
-        }
     }
 }

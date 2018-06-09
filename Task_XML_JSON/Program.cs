@@ -4,7 +4,6 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Json;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 
 
@@ -26,10 +25,16 @@ Empire; 13; 7/25/2011; 240;5,0;";
 
             File.WriteAllText(inputPath, csvString);
 
+            HotelConverter hotelConverter = new HotelConverter();
+
+
             List<Hotel> hotels = File.ReadAllLines(inputPath)
-                .Select(v => Hotel.FromCsv(v))
+                .Select(v => hotelConverter.HotelFromCsv(v))
                 .ToList();
+
+
             hotels.Sort(((hotel, hotel1) => hotel1.Rating.CompareTo(hotel.Rating)));
+
             string format = "";
             while (!format.Equals("JSON") && !format.Equals("XML"))
             {
@@ -38,28 +43,15 @@ Empire; 13; 7/25/2011; 240;5,0;";
                 format = Console.ReadLine();
                 if (format.Equals("JSON"))
                 {
-                    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Hotel[]));
-
-                    using (FileStream fs = new FileStream(outputPathJson, FileMode.OpenOrCreate))
-                    {
-                        ser.WriteObject(fs, hotels.ToArray());
-                    }
-
-                    Console.WriteLine("File is converted to JSON.Verify at " + outputPathJson);
+                    hotelConverter.HotelToJson(hotels.ToArray(), outputPathJson);
+                    Console.WriteLine("File is converted to JSON. Verify at " + outputPathJson);
                     Console.WriteLine(File.ReadAllText(outputPathJson));
                     
                 }
                 else if (format.Equals("XML"))
                 {
-                    XmlSerializer formatter = new XmlSerializer(typeof(Hotel[]));
-
-                    using (FileStream fs = new FileStream(outputPathXml, FileMode.OpenOrCreate))
-                    {
-                        formatter.Serialize(fs, hotels.ToArray());
-
-                        Console.WriteLine("File is converted to XML. Verify at " + outputPathXml);
-                    }
-
+                    hotelConverter.HotelToXml(hotels.ToArray(), outputPathXml);
+                    Console.WriteLine("File is converted to XML. Verify at " +outputPathXml);
                     Console.WriteLine(File.ReadAllText(outputPathXml));
                 }
             }

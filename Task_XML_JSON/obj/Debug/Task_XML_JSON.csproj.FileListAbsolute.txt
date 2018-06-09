@@ -5,3 +5,6 @@ E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.csprojAssembly
 E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.csproj.CoreCompileInputs.cache
 E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.exe
 E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.pdb
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\bin\Debug\Newtonsoft.Json.dll
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\bin\Debug\Newtonsoft.Json.xml
+E:\SS\C#Tasks\Task_XML_JSON\Task_XML_JSON\obj\Debug\Task_XML_JSON.csproj.CopyComplete
